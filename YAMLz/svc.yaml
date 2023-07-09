@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: chmodcalcapp-service
 spec:
-  type: LoadBalancer
   selector:
     app: chmodcalcapp
   ports:
