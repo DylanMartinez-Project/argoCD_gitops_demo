@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myapp-argo-application
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/DylanMartinez-Project/argoCD_gitops_demo.git
+    targetRevision: HEAD
+    path: YAMLz
+  destination: 
+    server: https://kubernetes.default.svc
+    namespace: chmodapp
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true # creates ns for app if not there
+
+    automated:
+      selfHeal: true # 3 MIN PULL / git webhook is an option for future
+      prune: true
