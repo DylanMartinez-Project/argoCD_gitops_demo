@@ -16,4 +16,4 @@ spec:
         - name: chmodcalcapp
           image: dielawnk8s/chmodcalcapp:v4.0
           ports:
-            - containerPort: 8081
+            - containerPort: 8501
