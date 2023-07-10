@@ -7,10 +7,5 @@ spec:
     app: chmodcalcapp
   ports:
     - protocol: TCP
-<<<<<<< Updated upstream
       port: 8501
       targetPort: 8501
-=======
-      port: 8081
-      targetPort: 8081
->>>>>>> Stashed changes
